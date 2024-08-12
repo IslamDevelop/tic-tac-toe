@@ -88,6 +88,7 @@ winorlose()
     function restart () {
         field = ['','','','','','','','','',]
         fieldButton.forEach(fieldButton => fieldButton.textContent = '')
+        
     }
 
     console.log(field)
