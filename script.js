@@ -3,6 +3,7 @@ const x = document.querySelector('.x')
 const fieldButton = document.querySelectorAll('.field')
 const fieldParent = document.querySelectorAll('.field_parent')
 const lib = document.querySelector('.field_parent')
+const restButton = document.querySelector('.rest')
 
 
 
@@ -48,6 +49,7 @@ x.addEventListener('click', () => {
        })
 
    }
+ 
 
 function cho(event) {
     abs = abs == 'x' ? 'o' : 'x'
@@ -75,12 +77,18 @@ winorlose()
         for (let i = 0; i < unfield.length; i++) {
             const [a,b,c] = unfield[i]
             if (field[a] && field[a] === field[b] && field[a] === field[c]) {
-                if(field[a] === 'o') {console.log('Выйграл нолик') } else {console.log('Выйграл крестик') }
-               const line = document.createElement('h1');
-                line.classList.add('line')
-                line.textContent = '/';
-                lib.append(line)
-                restart()
+                if(field[a] === 'o') {
+                   
+                    alert('Выйграл нолик')
+                    console.log('Выйграл нолик')
+                 } else {alert('Выйграл крестик') 
+                  
+                 }
+            //    const line = document.createElement('h1');
+                // line.classList.add('line')
+                // line.textContent = '/';
+                // lib.append(line)
+        
 
         }
     }
@@ -88,9 +96,9 @@ winorlose()
     function restart () {
         field = ['','','','','','','','','',]
         fieldButton.forEach(fieldButton => fieldButton.textContent = '')
-        
-    }
 
+    }
+    restButton.addEventListener('click', restart)
     console.log(field)
     console.log(unfield)
 

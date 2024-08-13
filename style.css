@@ -14,7 +14,7 @@
     font-weight: bold;
     font-size: 60px;
 }
-.line {
+/* .line {
     display: block;
     font-size: 60px;
     position: absolute;
@@ -34,7 +34,7 @@
     
     transform: translateX(134px) translateY(-462px)
 }
-}
+} */
 
 button {
     width: 100px;
@@ -43,6 +43,12 @@ button {
     color: black;
     font-size: 40px;
     font-weight: 800;
+}
+.play {
+display: flex;
+}
+.rest {
+    width: max-content;
 }
 .field {
     width: 100px;
